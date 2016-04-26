@@ -5,6 +5,6 @@
       = f.select :rating, options_for_select(@rating)
     .small-10
       = f.label :tvshow
-      = f.text_field :tvshow
+      = f.text_field :tvshow, placeholder: "Add tv show", class: "typeahead"
     .actions
       = f.submit "Add watched show", class: "button tiny success"

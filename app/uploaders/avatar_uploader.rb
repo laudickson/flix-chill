@@ -12,7 +12,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    '#{Rails.root}/spec/fixtures/images/defaultpropic.png'
+    "http://hackersworld.org/images/profile.png"
   end
 
   version :large_avatar do

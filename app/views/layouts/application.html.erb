@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%=" f l i x // c h i l l "%></title>
+    <%= include_gon %>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="pagewrap">
+  <body class="wrapper">
     <header>
       <%= render "layouts/navbar" %>
       <%= render "layouts/flash" %>
@@ -25,8 +26,10 @@
       <%= yield %>
     </div>
 
-    <%= render "layouts/footer" %>
 
     <%= javascript_include_tag "application" %>
   </body>
+
+  <%= render "layouts/footer" %>
+
 </html>
