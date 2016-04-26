@@ -4,8 +4,12 @@
       %img{ src: "#{current_user.avatar.large_avatar}"}
       .content
         %p.defaultfont= current_user.username
-  .small-6.columns
-    =render template: "watchedshows/new.html.haml"
+  .small-4.columns
+  .small-4.columns.addshowobject
+    .card
+      %p.defaultfont Add a new show that you've watched!
+      .formobject
+        =render template: "watchedshows/new.html.haml"
 
 .row
   .small-12.columns
