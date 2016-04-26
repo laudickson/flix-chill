@@ -6,9 +6,6 @@ class ProfilesController < ApplicationController
     @add_watched_show = Watchedshow.new
   end
 
-  def edit
-  end
-
   def show
     @user = User.find(params[:id])
     @list_of_watchedtvshows = Watchedshow.where(user: @user)

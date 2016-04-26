@@ -1,10 +1,10 @@
 .formobject
   = form_for @add_watched_show do |f|
     .small-10
-      = f.label :rating
-      = f.select :rating, options_for_select(@rating)
-    .small-10
       = f.label :tvshow
       = f.text_field :tvshow
+    .small-10
+      = f.label :rating
+      = f.select :rating, options_for_select(@rating)
     .actions
       = f.submit "Add watched show", class: "button tiny success"

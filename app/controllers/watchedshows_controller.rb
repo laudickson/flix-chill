@@ -27,7 +27,6 @@ class WatchedshowsController < ApplicationController
     else
       @add_watched_show = Watchedshow.new(user: @user, tvshow: @show, rating: watchedtvshow_params[:rating] )
     end
-    binding.pry
     if @add_watched_show.save
       flash[:notice] = "#{@show.name} is now in your watched list!"
       redirect_to profiles_path
@@ -35,11 +34,6 @@ class WatchedshowsController < ApplicationController
       flash[:error] = "This show has already been added to your watched list!"
       redirect_to profiles_path
     end
-  end
-
-  def new
-    @add_watched_show = Watchedshow.new
-    @rating = Watchedshow::RATING
   end
 
   private

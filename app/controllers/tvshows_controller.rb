@@ -1,8 +1,4 @@
 class TvshowsController < ApplicationController
-  def new
-    @show = Tvshow.new
-  end
-
   def create
     @show = Tvshow.new(tvshow_params)
     apititle = @show.name.gsub(/ /,'-')

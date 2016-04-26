@@ -22,9 +22,18 @@
   font-family: 'Rajdhani', sans-serif;
 }
 
-.pagewrap {
-  position: relative;
-  min-height: 100%;
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+  background: #E8E8E8;
+}
+
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
 }
 
  @mixin vertical-align {
@@ -49,7 +58,7 @@
    background-color: #292c2f;
    position: relative;
    width: 100%;
-   height: 100px;
+   height: 120px;
    text-align: center;
    font-size: 1.2rem;
    padding-top: 2rem;
@@ -108,10 +117,6 @@
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
-html,body { // for demo only
-  background: #FAFAFA;
-}
-
 .cardobject{
   padding-top: 2rem;
 }
@@ -121,6 +126,7 @@ html,body { // for demo only
 }
 
 .card {
+  background: #FAFAFA;
   padding: 1rem 1rem 1rem 1rem;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;

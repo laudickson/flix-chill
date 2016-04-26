@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   authenticate :user do
     resources :profiles, only: [:index, :show]
-    resources :tvshows, only: [:create, :new]
-    resources :watchedshows, only: [:create, :new]
+    resources :watchedshows, only: [:create]
   end
 end
