@@ -1,0 +1,29 @@
+<p class="signupheader small-7 small-centered columns">Hello, welcome back!</p>
+<div class="small-6 small-centered columns auth-plain">
+  <div class="signup-panel left-solid">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="row collapse">
+      <div class="small-2  columns">
+        <span class="prefix"><i class="fi-mail"></i></span>
+      </div>
+      <div class="small-10 columns">
+        <%= f.email_field :email, autofocus: true, placeholder: "email" %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-2 columns ">
+        <span class="prefix"><i class="fi-lock"></i></span>
+      </div>
+      <div class="small-10 columns ">
+        <%= f.password_field :password, autocomplete: "off", placeholder: "password" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Log in", class: "button defaultfont success" %>
+      </div>
+    </div>
+    <% end %>
+    <div class = "small-10 columns">
+      <span class = "defaultfont"><%= render "devise/shared/links" %></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.row
+  .small-4.columns.cardobject
+    .card
+      %img{ src: "#{current_user.avatar.large_avatar}"}
+      .content
+        %p.defaultfont= current_user.username
+  .small-6.columns
+    =render template: "tvshows/new.html.haml"
+
+.row
+  .small-12.columns
+    %ul.small-block-grid-5.posterimage
+      - @list_of_watchedtvshows.each do |show|
+        %li
+          %img{src: "#{Tvshow.find(show.tvshow).posterlink}"}
+          %h5= Tvshow.find(show.tvshow).name
+          %span= render 'profiles/stars', locals: {gold: show.rating, silver: 5 - show.rating}

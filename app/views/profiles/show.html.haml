@@ -1,0 +1,18 @@
+%h3= link_to "add new show", new_tvshow_path
+
+.row
+  .small-4.columns
+    .card
+      .image
+        %img{src: "#{@user.avatar.large_avatar}"}
+        %span.title="#{@user.username}"
+      .content
+        %p.watchedcontent Watched:
+        %ul.watchedshowslist.row.inline-list
+          - @list_of_watchedtvshows.each do |show|
+            %li.watchedshowslist="#{Tvshow.find(show.tvshow).name}"
+            .rating.small-6.columns
+              .stars
+                %li.hidden-rating= render 'profiles/stars', locals: {gold: show.rating, silver: 5 - show.rating}
+      .action
+        %p chill / not chill

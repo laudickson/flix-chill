@@ -1,0 +1,25 @@
+!!!5
+%html{lang: 'en'}
+  %head
+    %link{href: 'http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', rel: 'stylesheet'}
+    %link{href: 'https://fonts.googleapis.com/css?family=Gloria+Hallelujah', rel: 'stylesheet', type: 'text/css'}
+
+    %meta{charset: 'utf-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+
+    %title w a t c h // c h i l l
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+
+  %body
+    %header.splashscreen
+      = render "layouts/navbar"
+      %h2.small-3.small-push-2 Here's to good chillin'
+    .signinup.small-3.columns
+      %a.large.button.secondary.radius{href: "/users/sign_in"} Sign in
+      %a.large.button.secondary.radius{href: "/users/sign_up"} Sign up
+    %footer.footer
+      .row
+        .small-12.columns
