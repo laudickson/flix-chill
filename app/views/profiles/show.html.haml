@@ -11,5 +11,5 @@
       - @list_of_watchedtvshows.each do |show|
         %li
           %img{src: "#{Tvshow.find(show.tvshow).posterlink}"}
-          %h5= Tvshow.find(show.tvshow).name
+          %h4.defaultfont= link_to Tvshow.find(show.tvshow).name, Tvshow.find(show.tvshow).imdblink
           %span= render 'profiles/stars', locals: {gold: show.rating, silver: 5 - show.rating}

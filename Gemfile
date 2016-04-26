@@ -18,6 +18,8 @@ gem 'dotenv-rails'
 gem 'httparty'
 gem 'foundation-rails'
 gem 'sass-rails'
+gem 'gon'
+gem 'twitter-typeahead-rails'
 
 group :development, :test do
   gem 'pry-rails'

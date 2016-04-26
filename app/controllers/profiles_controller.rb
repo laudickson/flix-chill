@@ -4,6 +4,8 @@ class ProfilesController < ApplicationController
     @show = Tvshow.new
     @rating = Watchedshow::RATING
     @add_watched_show = Watchedshow.new
+    gon.tvshows = Tvshow.pluck(:name)
+    gon.posters = Tvshow.all.map{|show| show.posterlink}
   end
 
   def show

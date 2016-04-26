@@ -18,6 +18,12 @@
 
  @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
+ .custom-form {
+   padding: 5px 10px;
+   text-align: center;
+   background-color: #FAFAFA;
+ }
+
 .defaultfont{
   font-family: 'Rajdhani', sans-serif;
 }
@@ -129,7 +135,7 @@ html, body {
   background: #FAFAFA;
   padding: 1rem 1rem 1rem 1rem;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: #272727;
   border-radius: 5px;
