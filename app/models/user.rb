@@ -1,14 +1,13 @@
 class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
-  has_many :watchedshows
-  has_many :tvshows, through: :watchedshows
-
-  has_many :chills
-
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :avatar
+  has_many :watchedshows
+  has_many :tvshows, through: :watchedshows
+  has_many :conversations, foreign_key: :sender_id
+  has_many :chills
+
   validates_integrity_of :avatar
   validates_processing_of :avatar
 
