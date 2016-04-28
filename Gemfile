@@ -22,6 +22,7 @@ gem 'gon'
 gem 'twitter-typeahead-rails'
 gem 'private_pub'
 gem 'thin'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'pry-rails'
@@ -39,3 +40,5 @@ group :test do
   gem 'capybara-rails'
   gem 'factory_girl_rails'
 end
+
+ruby '2.2.3'
