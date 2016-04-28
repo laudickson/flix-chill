@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
@@ -22,6 +24,7 @@ gem 'gon'
 gem 'twitter-typeahead-rails'
 gem 'private_pub'
 gem 'thin'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'pry-rails'
