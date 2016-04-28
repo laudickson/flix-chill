@@ -12,7 +12,7 @@
     <section class="top-bar-section">
     <% if current_user %>
       <ul class="right inline-list hide-for-small-only account-action">
-        <li class="navbarbuttons"><a href="/profiles" data-reveal-id="myModal">Profile</a></li>
+        <li class="navbarbuttons"><a href="/matches" data-reveal-id="myModal">Who's chillin?</a></li>  <li class="navbarbuttons"><a href="/profiles" data-reveal-id="myModal">Profile</a></li>
         <li class="navbarbuttons"><a href="/users/edit" data-reveal-id="myModal">Settings</a></li>
         <li class="navbarbuttons"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       </ul>

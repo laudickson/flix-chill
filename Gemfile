@@ -20,6 +20,8 @@ gem 'foundation-rails'
 gem 'sass-rails'
 gem 'gon'
 gem 'twitter-typeahead-rails'
+gem 'private_pub'
+gem 'thin'
 
 group :development, :test do
   gem 'pry-rails'

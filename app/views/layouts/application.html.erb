@@ -5,14 +5,17 @@
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
 
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%=" f l i x // c h i l l "%></title>
     <%= include_gon %>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+
+    <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -25,10 +28,23 @@
     <div class="row ">
       <%= yield %>
     </div>
-
-
-    <%= javascript_include_tag "application" %>
   </body>
+
+  <% if current_user %>
+   <script type="text/javascript">
+       channel = <%= raw ('"' + '/notifications' + current_user.id.to_s + '"') %>
+       PrivatePub.subscribe(channel, function(data) {
+       var sender_id = data.sid;
+       var recipient_id = data.rip;
+       var conversation_id = data.cid;
+       $.post("/conversations", { sender_id: sender_id, recipient_id: recipient_id }, function (data) {
+           chatBox.chatWith(conversation_id);
+       });
+       });
+   </script>
+   
+   <%= subscribe_to "/notifications" + current_user.id.to_s %>
+   <% end %>
 
   <%= render "layouts/footer" %>
 

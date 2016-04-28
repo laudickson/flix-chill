@@ -13,8 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require twitter/typeahead
+//= require chat
+//= require private_pub
 //= require turbolinks
 //= require_tree .
-//= require twitter/typeahead
 
 $(function(){ $(document).foundation(); });
