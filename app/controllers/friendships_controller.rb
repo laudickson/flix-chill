@@ -3,11 +3,15 @@ class FriendshipsController < ApplicationController
   def create
     @user = current_user
     @match = User.find(params[:id])
-    @newconnection = Friendship.new(giver_id: @user.id, reciever_id: @match.id) Friendship.between(params[:giver_id],params[:reciever_id]).first
+    @newconnection = Friendship.new(giver_id: @user.id, reciever_id: @match.id)
+    @otherconnection = Friendship.new(giver_id: @match.id, reciever_id: @user.id)
+
+    if @newconnection.save && @otherconnection.save
+      flash[:notice] = "ya'll can start chillin now"
+      redirect_to matches_path
     else
-      @friendship = Friendship.create!(friendship_params)
+      flash[:error] = "can't chill :("
     end
-    redirect_to profiles_path
   end
 
 

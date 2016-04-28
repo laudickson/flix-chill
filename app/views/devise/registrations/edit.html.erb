@@ -18,7 +18,7 @@
           <span class="prefix"><i class="fi-lock"></i></span>
         </div>
         <div class="small-10 columns">
-          <%= f.password_field :password, autocomplete: "off", placeholder: "#{@minimum_password_length} characters minimum" %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: "wanna change your password?" %>
         </div>
       </div>
 
@@ -27,7 +27,15 @@
           <span class="prefix"><i class="fi-loop"></i></span>
         </div>
         <div class="small-10 columns">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "password confirmation" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "new password confirmation" %>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="small-2  columns">
+          <span class="prefix"><i class="fi-lock"></i></span>
+        </div>
+        <div class="small-10 columns">
+          <%= f.password_field :current_password, autofocus: true, placeholder: "current password to confirm changes" %>
         </div>
       </div>
 

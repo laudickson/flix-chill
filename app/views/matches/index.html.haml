@@ -1,0 +1,8 @@
+.row
+  .small-10.small-centered
+    %p.defaultfont Who's down to chill?
+    %ul.small-block-grid-5
+      - @matches.each_with_index do |user, index|
+        %li
+          %img{src: "#{user.avatar.large_avatar}"}
+          = link_to "Send Message", "#", class: "button success tiny start-conversation", "data-sid" => current_user.id, "data-rip" => user.id
