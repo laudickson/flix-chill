@@ -11,7 +11,7 @@ feature 'user goes to new show form' do
 
     Tvshow.create(
         name: "Game of Thrones",
-        posterlink: "http://ia.media-imdb.com/images/M/MV5BMjM5OTQ1MTY5Nl5BMl5BanBnXkFtZTgwMjM3NzMxODE@._V1_SX300.jpg"
+        posterlink: "http://ia.media-imdb.com/images/M/MV5BMjM5OTQ1MTY5Nl5BMl5BanBnXkFtZTgwMjM3NzMxODE@._V1_SX300.jpg",
         imdblink:"http://www.imdb.com/title/tt0944947/"
       )
     visit root_path
