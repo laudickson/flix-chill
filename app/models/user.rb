@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :watchedshows
   has_many :tvshows, through: :watchedshows
   has_many :conversations, foreign_key: :sender_id
-  has_many :chills
+  has_many :friendships, foreign_key: :giver_id
 
   validates_integrity_of :avatar
   validates_processing_of :avatar

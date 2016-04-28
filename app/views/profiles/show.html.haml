@@ -4,6 +4,7 @@
       %img{ src: "#{@user.avatar.large_avatar}"}
       .content
         %p.defaultfont= @user.username
+        = link_to "Chill?", friendships_path(friend_id: :user), method: :post, class: "button small success radius"
 
 .row
   .small-12.columns

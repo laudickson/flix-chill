@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :watchedshows, only: [:create]
     resources :matches, only: [:index]
   end
+  resources :friendships, only: [:create, :destroy]
 
   resources :conversations do
     resources :messages
