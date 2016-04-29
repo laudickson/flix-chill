@@ -18,9 +18,6 @@
 
  @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
- $global-radius: 4px;
-
-
  .image-wrapper {
    width: 100%;
    height: 100%;
@@ -28,7 +25,7 @@
    overflow: hidden;
    position: relative;
    text-align: center;
-   border-radius: $global-radius;
+   border-radius: 4px;
  }
 
  .image-overlay-content {
@@ -43,15 +40,6 @@
  // modifier classes
 
  .overlay-fade-in {
-
-   p {
-     letter-spacing: 0.15em;
-     color: #f4f4f4;
-     font-size: 28px;
-     opacity: 0;
-     transition: all 0.2s linear;
-   }
-
    img {
      transition: all 0.2s linear;
    }
@@ -92,7 +80,7 @@
      opacity: 1;
    }
 
-   &:hover h2, p, .button {
+   &:hover h2, .button {
      opacity: 1;
    }
  }
@@ -267,8 +255,6 @@ html, body {
  .posterimage {
   padding-top: 5rem;
 }
-
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
 .cardobject{
   padding-top: 2rem;
