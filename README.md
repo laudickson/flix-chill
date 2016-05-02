@@ -17,3 +17,4 @@ Highlighted features and technologies this app incorporates:
 [Foundation 5](http://foundation.zurb.com) for styling
 
 [demo](http://flix-chill.herokuapp.com)
+NOTE : chat system is buggy on Safari! Please use Chrome instead!
