@@ -7,6 +7,6 @@
           .image-wrapper.overlay-fade-in
             %img{src: "#{user.avatar.large_avatar}"}
             .image-overlay-content
-              = link_to 'Profile', profile_path(user), class: "button tiny profilebuttonmatch"
               %h2="#{user.username}"
+              = link_to 'Profile', profile_path(user), class: "button tiny profileshowbutton"
               = link_to "Chill?", "#", class: "button success tiny start-conversation conversationbutton", "data-sid" => current_user.id, "data-rip" => user.id

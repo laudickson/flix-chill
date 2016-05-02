@@ -12,7 +12,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    "http://hackersworld.org/images/profile.png"
+    "https://www.mypraize.com/static/images/defaults/profile-images/default-profile.gif"
   end
 
   version :large_avatar do

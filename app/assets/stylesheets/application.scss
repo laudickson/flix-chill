@@ -59,6 +59,17 @@
      background: rgba(0,0,0,0.7);
    }
 
+   .profileshowbutton{
+     display: inline-bloc;
+     text-decoration: none;
+     position: relative;
+     padding-top: 1rem;
+
+     &:hover{
+       box-shadow: 0 0 5px #000;
+     }
+   }
+
    .conversationbutton {
      display: inline-block;
      text-decoration: none;
