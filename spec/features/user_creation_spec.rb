@@ -4,7 +4,7 @@ feature 'User Creation:' do
 
   before :each do
     visit root_path
-    click_link 'Sign Up'
+    click_link 'Sign up'
   end
 
   scenario 'user can create an account' do
