@@ -32,7 +32,7 @@
     </div>
 
     <div class="row collapse">
-      <div class="small-2  columns">
+      <div class="small-2 columns">
         <span class="prefix"><i class="fi-loop"></i></span>
       </div>
       <div class="small-10 columns">
@@ -44,9 +44,9 @@
       <div class="small-2 columns">
         <span class="prefix"><i class="fi-photo"></i></span>
       </div>
-      <div class="small-10 columns propiclabel">
-        <span>Profile picture</span>
+      <div class="small-10 columns" style="padding-left: .5rem;">
         <%= f.label :avatar do %>
+          <span>Profile picture</span>
           <%= f.file_field :avatar %>
           <%= f.hidden_field :avatar_cache %>
         <% end %>
@@ -54,11 +54,11 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up", class: "button success defaultfont" %>
+      <%= f.submit "Sign up", class: "button success", id: "default_font" %>
     </div>
     <% end %>
     <div class = "small-10 columns">
-      <span class = "defaultfont"><%= render "devise/shared/links" %></span>
+      <span id = "default_font"><%= render "devise/shared/links" %></span>
     </div>
   </div>
 </div>

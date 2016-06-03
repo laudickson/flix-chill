@@ -21,6 +21,7 @@
 @import 'profiles';
 @import 'tvshows';
 @import 'splashscreen';
+@import 'signup_forms';
 
 #card_padding{
   padding-top: 2rem;
@@ -112,13 +113,6 @@ html, body {
 .wrapper {
 	min-height: 100%;
 	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
-}
-
-
-.signupheader {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 2.5rem;
-  padding-left: 3.5rem;
 }
 
 .propiclabel {

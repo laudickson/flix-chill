@@ -4,8 +4,7 @@
       %img{ src: "#{current_user.avatar.large_avatar}"}
       .content
         %p#default_font= current_user.username
-  .small-4.columns
-  .small-4.columns#card_padding
+  .small-4.columns#card_padding.small-push-3.end
     .card
       %p#default_font Add a new show that you've watched!
       .formobject
@@ -13,9 +12,9 @@
 
 .row
   .small-12.columns
-    %ul.small-block-grid-5.posterimage
+    %ul.small-block-grid-5#poster_image
       - @list_of_watchedtvshows.each do |show|
         %li
-          %img{src: "#{Tvshow.find(show.tvshow).posterlink}"}
-          %h4#default_font= link_to Tvshow.find(show.tvshow).name, Tvshow.find(show.tvshow).imdblink
+          %img{src: "#{show.tvshow.posterlink}"}
+          %h4#default_font= link_to show.tvshow.name, show.tvshow.imdblink
           %span= render 'profiles/stars', locals: {gold: show.rating, silver: 5 - show.rating}
