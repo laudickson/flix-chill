@@ -32,7 +32,7 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.11)
     builder (3.2.2)
-    capybara (2.7.0)
+    capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -47,11 +47,12 @@ GEM
       capybara-console
       database_cleaner
       exception_notification
-    carrierwave (0.11.0)
+    carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+      mimemagic (>= 0.3.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -69,7 +70,7 @@ GEM
       tins (~> 1.6.0)
     daemons (1.2.3)
     database_cleaner (1.5.3)
-    devise (4.0.1)
+    devise (4.1.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 5.1)
@@ -95,7 +96,7 @@ GEM
       actionmailer (~> 4.0)
       activesupport (~> 4.0)
     excon (0.49.0)
-    execjs (2.6.0)
+    execjs (2.7.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.7.0)
@@ -111,7 +112,7 @@ GEM
       multi_json (>= 1.0.0)
       rack (>= 1.0.0)
       websocket-driver (>= 0.5.1)
-    faye-websocket (0.10.3)
+    faye-websocket (0.10.4)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
     fission (0.5.0)
@@ -167,7 +168,7 @@ GEM
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
-    fog-core (1.38.0)
+    fog-core (1.40.0)
       builder
       excon (~> 0.49)
       formatador (~> 0.2)
@@ -187,10 +188,9 @@ GEM
       multi_json (~> 1.10)
     fog-local (0.3.0)
       fog-core (~> 1.27)
-    fog-openstack (0.1.4)
-      fog-core (>= 1.38)
+    fog-openstack (0.1.6)
+      fog-core (>= 1.39)
       fog-json (>= 1.0)
-      fog-xml (>= 0.1)
       ipaddress (>= 0.8)
     fog-powerdns (0.1.1)
       fog-core (~> 1.27)
@@ -219,7 +219,7 @@ GEM
     fog-serverlove (0.1.2)
       fog-core
       fog-json
-    fog-softlayer (1.1.0)
+    fog-softlayer (1.1.1)
       fog-core
       fog-json
     fog-storm_on_demand (0.1.1)
@@ -234,7 +234,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (0.6.4)
+    fog-vsphere (0.7.0)
       fog-core
       rbvmomi (~> 1.8)
     fog-xenserver (0.2.3)
@@ -254,7 +254,7 @@ GEM
       request_store (>= 1.0)
     haml (4.0.7)
       tilt
-    hashie (3.4.3)
+    hashie (3.4.4)
     hike (1.2.3)
     http_parser.rb (0.6.0)
     httparty (0.13.7)
@@ -263,7 +263,7 @@ GEM
     i18n (0.7.0)
     inflecto (0.0.2)
     ipaddress (0.8.3)
-    jbuilder (2.4.1)
+    jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (3.1.4)
@@ -276,13 +276,14 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (3.0)
+    mime-types (3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0221)
+    mime-types-data (3.2016.0521)
+    mimemagic (0.3.1)
     mini_magick (4.5.1)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
-    multi_json (1.11.3)
+    minitest (5.9.0)
+    multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nokogiri (1.6.7.2)
@@ -390,10 +391,10 @@ GEM
       sprockets (>= 2.8, < 4.0)
     term-ansicolor (1.3.2)
       tins (~> 1.0)
-    thin (1.6.4)
+    thin (1.7.0)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
-      rack (~> 1.0)
+      rack (>= 1, < 3)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -412,7 +413,7 @@ GEM
     valid_attribute (2.0.0)
     warden (1.2.6)
       rack (>= 1.0)
-    websocket-driver (0.6.3)
+    websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     xml-simple (1.1.5)
@@ -458,5 +459,8 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   valid_attribute
 
+RUBY VERSION
+   ruby 2.2.3p173
+
 BUNDLED WITH
-   1.11.2
+   1.12.4
