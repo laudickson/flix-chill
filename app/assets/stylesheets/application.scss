@@ -12,7 +12,6 @@
  *
  *= require_self
  *= require foundation_and_overrides
- *= require_tree .
 
  */
 
@@ -21,6 +20,7 @@
 @import 'matches';
 @import 'profiles';
 @import 'tvshows';
+@import 'splashscreen';
 
 #card_padding{
   padding-top: 2rem;
@@ -114,13 +114,6 @@ html, body {
 	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
 }
 
- @mixin vertical-align {
-   position: relative;
-   top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
- }
 
 .signupheader {
   font-family: 'Rajdhani', sans-serif;
@@ -171,21 +164,6 @@ html, body {
    }
  }
 
-.splashscreen{
-  background: url(image_path('splashbackground.jpg')) no-repeat center center;
-  background-size: cover;
-  height: 95vh;
-  overflow: hidden;
-  h2 {
-      padding-left: 2rem;
-      font-family: "Gloria Hallelujah";
-      font-size: 72px;
-      color: #fff;
-      text-align: center;
-      @include vertical-align;
-      position: fixed;
-    }
-  }
 
  .flashnotices{
    padding-left: 1rem;
@@ -219,17 +197,6 @@ html, body {
   height: 100%;
   width: auto;
   transform: translate(-50%, -50%);
-}
-
-.signinup{
-  a {
-    font-family: "Gloria Hallelujah";
-    font-size: 2rem;
-  }
-  position: fixed;
-  padding-left: 10rem;
-  top: 40%;
-  left: 34%;
 }
 
  .button-group {
