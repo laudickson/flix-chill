@@ -1,13 +1,13 @@
 .row
-  .small-4.columns.cardobject
+  .small-4.columns#card_padding
     .card
       %img{ src: "#{current_user.avatar.large_avatar}"}
       .content
-        %p.defaultfont= current_user.username
+        %p#default_font= current_user.username
   .small-4.columns
-  .small-4.columns.addshowobject
+  .small-4.columns#card_padding
     .card
-      %p.defaultfont Add a new show that you've watched!
+      %p#default_font Add a new show that you've watched!
       .formobject
         =render template: "watchedshows/new.html.haml"
 
@@ -17,5 +17,5 @@
       - @list_of_watchedtvshows.each do |show|
         %li
           %img{src: "#{Tvshow.find(show.tvshow).posterlink}"}
-          %h4.defaultfont= link_to Tvshow.find(show.tvshow).name, Tvshow.find(show.tvshow).imdblink
+          %h4#default_font= link_to Tvshow.find(show.tvshow).name, Tvshow.find(show.tvshow).imdblink
           %span= render 'profiles/stars', locals: {gold: show.rating, silver: 5 - show.rating}

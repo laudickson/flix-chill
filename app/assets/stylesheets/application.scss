@@ -10,93 +10,25 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+ *= require_tree .
 
  */
 
- @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
- .image-wrapper {
-   width: 100%;
-   height: 100%;
-   border: 1px solid rgba(0,0,0,0.04);
-   overflow: hidden;
-   position: relative;
-   text-align: center;
-   border-radius: 4px;
- }
+@import 'matches';
+@import 'profiles';
+@import 'tvshows';
 
- .image-overlay-content {
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   overflow: hidden;
-   top: 0;
-   left: 0
- }
+#card_padding{
+  padding-top: 2rem;
+}
 
- // modifier classes
-
- .overlay-fade-in {
-   img {
-     transition: all 0.2s linear;
-   }
-
-   .image-overlay-content {
-     opacity: 0;
-     background-color: rgba(0,0,0, 0.4);
-     transition: all 0.4s ease-in-out;
-   }
-
-   h2 {
-     color: #f2f2f2;
-     font-size: 1.8rem;
-     margin-top: 40%;
-     opacity: 0;
-     transition: all 0.2s ease-in-out;
-     background: rgba(0,0,0,0.7);
-   }
-
-   .profileshowbutton{
-     display: inline-bloc;
-     text-decoration: none;
-     position: relative;
-     padding-top: 1rem;
-
-     &:hover{
-       box-shadow: 0 0 5px #000;
-     }
-   }
-
-   .conversationbutton {
-     display: inline-block;
-     text-decoration: none;
-     box-shadow: 0 0 1px #000;
-     position: relative;
-     opacity: 1;
-     padding-top: 1rem;
-
-     &:hover {
-       box-shadow: 0 0 5px #000;
-     }
-   }
-
-   &:hover img {
-     transform: scale(1.2);
-   }
-
-   &:hover .image-overlay-content {
-     opacity: 1;
-   }
-
-   &:hover h2, .button {
-     opacity: 1;
-   }
- }
-
-
+#default_font{
+  font-family: 'Rajdhani', sans-serif;
+}
 
 .pull-left{
   float: left !important;
@@ -166,10 +98,6 @@
   padding: 5px 10px;
   text-align: center;
   background-color: #FAFAFA;
-}
-
-.defaultfont{
-  font-family: 'Rajdhani', sans-serif;
 }
 
 * {
@@ -262,55 +190,6 @@ html, body {
  .flashnotices{
    padding-left: 1rem;
  }
-
- .posterimage {
-  padding-top: 5rem;
-}
-
-.cardobject{
-  padding-top: 2rem;
-}
-
-.addshowobject{
-  padding-top: 2rem;
-}
-
-.card {
-  background: #FAFAFA;
-  padding: 1rem 1rem 1rem 1rem;
-  font-family: 'Roboto', sans-serif;
-  overflow: visible;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: #272727;
-  border-radius: 5px;
-
-  .formobject{
-    padding-left: 1rem;
-  }
-  .content {
-    padding: 1.3rem;
-    border-radius: 0 0 2px 2px;
-    p{
-      font-size: 1.7rem;
-    }
-  }
-  .action {
-    border-top: 1px solid rgba(160, 160, 160, 0.2);
-    padding: 1.3rem;
-  }
-  a {
-    color: #ffab40;
-    margin-right: 1.3rem;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .image {
-    img {
-      border: 2px solid;
-    }
-  }
-}
 
 .avatar-container {
  position: relative;
