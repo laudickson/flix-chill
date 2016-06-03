@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427154845) do
+ActiveRecord::Schema.define(version: 20160603184808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "chills", force: true do |t|
-    t.integer "user_id",                 null: false
-    t.integer "match",                   null: false
-    t.boolean "chill",   default: false
-  end
 
   create_table "conversations", force: true do |t|
     t.integer  "sender_id"
@@ -31,6 +25,14 @@ ActiveRecord::Schema.define(version: 20160427154845) do
 
   add_index "conversations", ["recipient_id"], name: "index_conversations_on_recipient_id", using: :btree
   add_index "conversations", ["sender_id"], name: "index_conversations_on_sender_id", using: :btree
+
+  create_table "friendships", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "match_id"
+    t.boolean  "approved"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", force: true do |t|
     t.text     "body"
