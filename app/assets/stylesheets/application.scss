@@ -15,13 +15,12 @@
 
  */
 
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
-
 @import 'matches';
 @import 'profiles';
 @import 'tvshows';
 @import 'splashscreen';
 @import 'signup_forms';
+@import 'chat';
 
 #card_padding{
   padding-top: 2rem;
@@ -31,78 +30,27 @@
   font-family: 'Rajdhani', sans-serif;
 }
 
-.pull-left{
-  float: left !important;
+#flash_notices{
+  padding-left: 1rem;
+  font-family: 'Rajdhani', sans-serif;
 }
 
-.matchedpics{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+#topbar_name{
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: #fff;
+
+  @media only screen and (min-width: 40.063em){
+    float: left;
+  }
 }
-
- $media-spacing: 15px;
- $media-heading-bottom-margin: 5px;
- $media-image-alignment-margin: 10px;
-
- // Clear the floats
- .media,
- .media-body {
-     overflow: hidden;
-     zoom: 1;
- }
-
- // Proper spacing between instances of .media
- .media,
- .media .media {
-   margin-top: $media-spacing;
- }
- .media:first-child {
-   margin-top: 0;
- }
-
- // For images and videos, set to block
- .media-object {
-   display: block;
- }
-
- // Reset margins on headings for tighter default spacing
- .media-heading {
-   margin-bottom: $media-heading-bottom-margin;
- }
-
-
- // Media image alignment
- // -------------------------
-
- .media {
-   > .left {
-     margin-right: $media-image-alignment-margin;
-   }
-   > .right {
-     margin-left: $media-image-alignment-margin;
-   }
- }
-
-
- // Media list variation
- // -------------------------
-
- // Undo default ul/ol styles
- .media-list {
-   padding-left: 0;
-   list-style: none;
- }
-
-
 
 .custom-form {
   padding: 5px 10px;
   text-align: center;
   background-color: #FAFAFA;
-}
-
-* {
-	margin: 0;
 }
 
 html, body {
@@ -113,10 +61,6 @@ html, body {
 .wrapper {
 	min-height: 100%;
 	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
-}
-
-.propiclabel {
-  padding-left: 50rem;
 }
 
 .footer {
@@ -156,11 +100,6 @@ html, body {
        padding: 0 0.4rem 0 0.8rem;
      }
    }
- }
-
-
- .flashnotices{
-   padding-left: 1rem;
  }
 
 .avatar-container {
@@ -284,22 +223,5 @@ html, body {
        background-color: scale-color($background-color, $lightness: 10%);
        border-radius: 3px;
      }
-   }
- }
-
- .name {
-   text-align: center;
-   font-size:  1.5rem;
-   line-height: 1;
-   margin: 0 0 1rem 0;
-   color: #fff;
-
-   i {
-     color: $primary-color;
-     margin-right: 0.5rem;
-   }
-
-   @media only screen and (min-width: 40.063em) {
-     float: left;
    }
  }

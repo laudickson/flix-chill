@@ -19,10 +19,10 @@ class FriendshipsController < ApplicationController
     @friendship = Friendship.where(match_id: current_user, user_id: params[:id]).first
     @friendship.update(approved: true)
     if @friendship.save
-      flash[:notice] = 'Successful match!'
+      flash[:notice] = 'You two are now connected!'
       redirect_to root_path
     else
-      flash[:error] = 'Match was unsuccessful :('
+      flash[:error] = 'Something went wrong :( try again, please!'
       redirect_to root_path
     end
   end

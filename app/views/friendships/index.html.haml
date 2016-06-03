@@ -1,6 +1,6 @@
 .row
   .small-10.small-centered
-    %p.defaultfont Chill requests!
+    %p.signupheader Chill requests!
     %ul.small-block-grid-3
       - current_user.requested_matches.each do |request|
         %li
@@ -8,12 +8,12 @@
             %img{src: "#{request.avatar.large_avatar}"}
             .image-overlay-content
               %h2= "#{request.username}"
-              = link_to "Accept", friendship_path(id: request), method: "put"
-              = link_to "Decline", friendship_path(id: request), method: :delete
+              = link_to "Accept", friendship_path(id: request), method: "put", class: "button success tiny"
+              = link_to "Decline", friendship_path(id: request), method: :delete, class: "button tiny alert"
 
 .row
   .small-10.small-centered
-    %p.defaultfont Who's down to chill?
+    %p.signupheader Who's down to chill?
     %ul.small-block-grid-3
       - current_user.matches.each do |user|
         %li
