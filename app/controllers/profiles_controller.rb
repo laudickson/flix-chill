@@ -10,6 +10,7 @@ class ProfilesController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @next_user = User.all.sample
     @list_of_watchedtvshows = Watchedshow.where(user: @user)
   end
 end

@@ -25,11 +25,3 @@ watchedshows = []
     rating: rand(5)
   )
 end
-
-ischill = []
-(1..20).each do |i|
-  ischill << Chill.create(
-  user: users.sample,
-  match: rand(20)
-  )
-end
