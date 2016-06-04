@@ -1,3 +1,5 @@
+[ ![Codeship Status for tsdlau/flix-chill](https://codeship.com/projects/33ddf990-efa6-0133-c965-762d210387aa/status?branch=master)](https://codeship.com/projects/149065)
+
 flix // chill is an app that attempts to connect users based on similar watched tv shows and their individual ratings. Once users have connected they can communicate with each other through an in-app chat system.
 
 Highlighted features and technologies this app incorporates:
