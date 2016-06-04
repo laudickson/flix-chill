@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   authenticate :user do
     resources :profiles, only: [:index, :show]
     resources :watchedshows, only: [:create]
-    resources :matches, only: [:index]
+    resources :friendships
   end
 
   resources :conversations do

@@ -5,6 +5,6 @@ test:
   server: "http://localhost:9292/faye"
   secret_token: "secret"
 production:
-  server: "http://flix-chill.herokuapp.com/faye"
+  server: "http://flix-chillpubserver.herokuapp.com/faye"
   secret_token: "e76ffa69b86917494e6ef42c1f15cd0e287f79ee9b40e3ae64995241d5acfcbc"
-  signature_expiration: 86400 # one day
+  signature_expiration: 3600 # eight hours

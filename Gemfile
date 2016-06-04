@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
@@ -16,8 +18,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'dotenv-rails'
 gem 'httparty'
-gem 'foundation-rails'
-gem 'sass-rails'
+gem 'foundation-rails', '5.4.3.1'
+gem 'sass-rails', '4.0.5'
 gem 'gon'
 gem 'twitter-typeahead-rails'
 gem 'private_pub'
@@ -40,5 +42,3 @@ group :test do
   gem 'capybara-rails'
   gem 'factory_girl_rails'
 end
-
-ruby '2.2.3'

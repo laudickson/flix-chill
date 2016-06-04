@@ -1,0 +1,20 @@
+.contain-to-grid
+  %nav.top-bar{data: {topbar: true}, role: "navigation"}
+    %ul.title-area.inline-list#topbar_name
+      %li
+        %img{src: "/assets/netflixchill.png"}
+      %li
+        %a{href: "/", style: "color: #fff;"} flix // chill
+      %li.show-for-small-only.toggle-topbar.menu-icon
+        %a{href: "#"}MENU
+    %section.top-bar-section
+      - if current_user
+        %ul.right.inline-list
+          %li
+            %a{href: "/friendships"}Who's Chillin?
+          %li
+            %a{href: "/profiles"}Profile
+          %li
+            %a{href: "/users/edit"}Settings
+          %li
+            = link_to "Sign Out", destroy_user_session_path, method: :delete

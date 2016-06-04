@@ -1,0 +1,25 @@
+.splashscreen{
+  background: url(image_path('splashbackground.jpg')) no-repeat center center;
+  background-size: cover;
+  height: 95vh;
+  overflow: hidden;
+
+  h2{
+    padding-left: 2rem;
+    padding-top: 15rem;
+    font-family: "Gloria Hallelujah";
+    font-size: 72px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #log_in_buttons{
+    padding-top: 19rem;
+    padding-left: 17rem;
+
+    a{
+      font-family: "Gloria Hallelujah";
+      font-size: 1.5rem;
+    }
+  }
+}
