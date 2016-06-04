@@ -20,6 +20,7 @@
 @import 'tvshows';
 @import 'splashscreen';
 @import 'signup_forms';
+@import 'topbar';
 @import 'chat';
 
 #card_padding{
@@ -33,18 +34,6 @@
 #flash_notices{
   padding-left: 1rem;
   font-family: 'Rajdhani', sans-serif;
-}
-
-#topbar_name{
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1;
-  margin: 0 0 1rem 0;
-  color: #fff;
-
-  @media only screen and (min-width: 40.063em){
-    float: left;
-  }
 }
 
 .custom-form {
@@ -102,36 +91,6 @@ html, body {
    }
  }
 
-.avatar-container {
- position: relative;
- overflow: hidden;
- border-radius: 50%;
-
- &.small {
-   height: 50px;
-   width: 50px;
- }
-
- &.medium {
-   height: 100px;
-   width: 100px;
- }
-
- &.large {
-   height: 150px;
-   width: 150px;
- }
-}
-
-.avatar-container > avatar {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  transform: translate(-50%, -50%);
-}
-
  .button-group {
   position: relative;
   display: inline-block;
@@ -153,75 +112,3 @@ html, body {
     margin-left: 5px;
   }
 }
-
- $background-color: #2C2416;
- $primary-color: #87D37C;
-
- .menu {
-   background-color: $background-color;
-   padding: 1rem 7rem;
-   height: auto;
-
-   .inline-list {
-     text-align: center;
-
-     li {
-       float: none;
-       display: inline-block;
-     }
-
-     a {
-       color: #fff;
-       padding-bottom: 0.5rem;
-
-       &:hover {
-         color: $primary-color;
-         transition: all .3s ease-in-out;
-       }
-     }
-
-     .active a {
-       color: $primary-color;
-     }
-   }
-
-   .account {
-     position: absolute;
-     top: 3%;
-     right: 3%;
-
-     a , i {
-       color: #fff;
-     }
-   }
-
-   @media only screen and (min-width: 40.063em) {
-   height: 4rem;
-
-   .inline-list {
-     float: left;
-     margin: 0 0 0 1.5rem;
-     }
-
-     a:hover {
-       border-bottom: 2px solid $primary-color;
-     }
-   }
-
-   .account-action {
-     float: right;
-     margin: -.75rem 0 0 0;
-
-     li {
-       margin-left: .2rem;
-     }
-
-     a { padding: 0.75rem 1rem;}
-
-     a.signup {
-       font-weight: bold;
-       background-color: scale-color($background-color, $lightness: 10%);
-       border-radius: 3px;
-     }
-   }
- }
