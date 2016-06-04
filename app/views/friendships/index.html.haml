@@ -1,25 +1,34 @@
-.row
-  .small-10.small-centered
-    %p.signupheader Chill requests!
-    %ul.small-block-grid-3
-      - current_user.requested_matches.each do |request|
-        %li
-          .image-wrapper.overlay-fade-in
-            %img{src: "#{request.avatar.large_avatar}"}
-            .image-overlay-content
-              %h2= "#{request.username}"
-              = link_to "Accept", friendship_path(id: request), method: "put", class: "button success tiny"
-              = link_to "Decline", friendship_path(id: request), method: :delete, class: "button tiny alert"
+.row#card_padding
+  .small-10.columns.small-centered
+    =link_to "Find others to chill with!", profile_path(id: @next_user), class: "signupheader"
+-if !current_user.requested_matches.empty?
+  .row#card_padding
+    .small-10.columns.small-centered
+      %p.signupheader Chill requests!
+      %ul.small-block-grid-3
+        - current_user.requested_matches.each do |request|
+          %li
+            .image-wrapper.overlay-fade-in
+              %img{src: "#{request.avatar.large_avatar}"}
+              .image-overlay-content
+                %h2= "#{request.username}"
+                = link_to "Accept", friendship_path(id: request), method: "put", class: "button success tiny"
+                = link_to "Decline", friendship_path(id: request), method: :delete, class: "button tiny alert"
 
-.row
-  .small-10.small-centered
-    %p.signupheader Who's down to chill?
-    %ul.small-block-grid-3
-      - current_user.matches.each do |user|
-        %li
-          .image-wrapper.overlay-fade-in
-            %img{src: "#{user.avatar.large_avatar}"}
-            .image-overlay-content
-              %h2= "#{user.username}"
-              = link_to 'Profile', profile_path(user), class: "button tiny profile_button"
-              = link_to "Send good vibes!", "#", class: "button success tiny start-conversation conversation_button", "data-sid" => current_user.id, "data-rip" => user.id
+-if !current_user.matches.empty?
+  .row#card_padding
+    .small-10.columns.small-centered
+      %p.signupheader Who's down to chill?
+      %ul.small-block-grid-3
+        - current_user.matches.each do |user|
+          %li
+            .image-wrapper.overlay-fade-in
+              %img{src: "#{user.avatar.large_avatar}"}
+              .image-overlay-content
+                %h2= "#{user.username}"
+                = link_to 'Profile', profile_path(user), class: "button tiny profile_button"
+                = link_to "Send good vibes!", "#", class: "button success tiny start-conversation conversation_button", "data-sid" => current_user.id, "data-rip" => user.id
+-else
+  .row
+    .small-10.small-centered
+      %p.signupheader Nobody to chill with yet :(

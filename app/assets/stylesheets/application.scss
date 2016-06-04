@@ -22,6 +22,7 @@
 @import 'signup_forms';
 @import 'topbar';
 @import 'chat';
+@import 'footer';
 
 #card_padding{
   padding-top: 2rem;
@@ -50,65 +51,4 @@ html, body {
 .wrapper {
 	min-height: 100%;
 	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
-}
-
-.footer {
-   background-color: #292c2f;
-   box-shadow: 0px 500px 0px 500px #292c2f;
-   position: relative;
-   width: 100%;
-   height: 120px;
-   text-align: center;
-   font-size: 1.2rem;
-   padding-top: 2rem;
-   p {
-     &.slogan {
-       font-family: 'Gloria Hallelujah';
-       color: #fff;
-       font-size: 1.8rem;
-       margin: 0 0 1rem;
-     }
-     &.copywrite {
-       color: #8f9296;
-       font-size: 0.875rem;
-       margin: 0;
-     }
-   }
-   .links a {
-     list-style: none;
-     font-weight: bold;
-     color: #ffffff;
-     padding: 3rem 0 2rem;
-     margin: 0;
-     &::after {
-       content: "•";
-       padding: 0 0.4rem 0 0.8rem;
-     }
-     &:last-child::after {
-       content: "";
-       padding: 0 0.4rem 0 0.8rem;
-     }
-   }
- }
-
- .button-group {
-  position: relative;
-  display: inline-block;
-  margin: 1rem 0;
-  &:before {
-    content: attr(data-grouptype);
-    z-index: 99999;
-    color: #999;
-    display: block;
-    font-size: 1rem;
-    padding: 0.25em;
-    border-radius: 50%;
-    background: #fff;
-    position: absolute;
-    left: 42.5%;
-    top: 0.35rem;
-  }
-  button + button {
-    margin-left: 5px;
-  }
 }
