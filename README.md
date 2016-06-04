@@ -1,6 +1,4 @@
-This app was created as part of the "Breakable Toy" capstone project of Launch Academy.
-
-flix // chill is an app that attempts to connect users based solely on similar watched tv shows and their individual ratings. Once users have connected they can communicate with each other through an in-app chat system.
+flix // chill is an app that attempts to connect users based on similar watched tv shows and their individual ratings. Once users have connected they can communicate with each other through an in-app chat system.
 
 Highlighted features and technologies this app incorporates:
 
@@ -17,4 +15,4 @@ Highlighted features and technologies this app incorporates:
 [Foundation 5](http://foundation.zurb.com) for styling
 
 [demo](http://flix-chill.herokuapp.com)
-NOTE : chat system is buggy on Safari! Please use Chrome instead!
+NOTE : chat system is buggy on Safari! Please use [Chrome](https://www.google.com/chrome/browser/desktop) instead!
