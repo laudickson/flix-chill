@@ -3,6 +3,7 @@ class FriendshipsController < ApplicationController
 
   def index
     @next_user = (User.all - [current_user]).sample
+    @all_people = User.where.not("id = ?",current_user.id).order("created_at DESC")
   end
 
   def create

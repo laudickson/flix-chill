@@ -1,6 +1,18 @@
 .row#card_padding
   .small-10.columns.small-centered
     =link_to "Find others to chill with!", profile_path(id: @next_user), class: "signupheader"
+.row
+  .small-10.small-centered
+  %p.defaultfont People who have checked out this app:
+  %ul.small-block-grid-3
+    - @all_people.each_with_index do |user, index|
+      %li
+        .image-wrapper.overlay-fade-in
+          %img{src: "#{user.avatar.large_avatar}"}
+          .image-overlay-content
+          %h2="#{user.username}"
+          = link_to 'Profile', profile_path(user), class: "button tiny profile_button"
+          = link_to "Send good vibes!", "#", class: "button success tiny start-conversation conversation_button", "data-sid" => current_user.id, "data-rip" => user.id
 -if !current_user.requested_matches.empty?
   .row#card_padding
     .small-10.columns.small-centered
@@ -9,7 +21,7 @@
         - current_user.requested_matches.each do |request|
           %li
             .image-wrapper.overlay-fade-in
-              %img{src: "#{request.avatar.large_avatar}"}
+              %img{src: "#{request.avatar.small_avatar}"}
               .image-overlay-content
                 %h2= "#{request.username}"
                 = link_to "Accept", friendship_path(id: request), method: "put", class: "button success tiny"
